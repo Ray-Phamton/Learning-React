@@ -1,10 +1,9 @@
-export const SaveGameStorage = ({newBoard,newTurn}) =>{
-    window.localStorage.setItem('board',JSON.stringify(newBoard))
-    window.localStorage.setItem('turn',newTurn)
+export const SaveGameStorage = ({ newBoard, newTurn }) => {
+  window.localStorage.setItem('board', JSON.stringify(newBoard))
+  window.localStorage.setItem('turn', newTurn)
 }
 
-export const resetGameStorage = () =>{
-    window.localStorage.removeItem('board')
-    window.localStorage.removeItem('turn')
+export const resetGameStorage = () => {
+  window.localStorage.removeItem('board')
+  window.localStorage.removeItem('turn')
 }
-
