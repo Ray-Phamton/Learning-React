@@ -4,6 +4,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  min-width: 100vh;
   margin: 0;
   color: white;
 }
@@ -12,6 +13,31 @@ section{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 5px;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+button{
+  min-width: 120px;
+  min-height: 25px;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 1000px;
+  color: purple;
+  font-size: medium;
+}
+button:hover{
+  background-color:rgba(180, 0, 160, 0.4);
+  transition: ease 0.3s;
+  cursor:pointer;
+  color: black;
+}
+.section-title{
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  flex-direction: column;
   gap: 5px;
   max-width: 400px;
 }

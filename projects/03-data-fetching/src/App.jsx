@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
+import { getRamdomFact } from './services/facts'
 import './App.css'
 
 let firstWord = null
-const CAT_ENDPOINT_RAMDOM_CAT = 'https://catfact.ninja/fact'
-
 const CAT_ENDPOINT_IMAGE_URL = (fact) => {
   firstWord = fact.split(' ')[0]
   return (`https://cataas.com/cat/says/${firstWord}?size=50&color=red&json=true`)
@@ -14,12 +13,7 @@ export function App () {
   const [imageUrl, setImageUrl] = useState('meow')
 
   useEffect(() => {
-    fetch(CAT_ENDPOINT_RAMDOM_CAT)
-      .then(res => res.json())
-      .then(data => {
-        const { fact } = data
-        setFact(fact)
-      })
+    getRamdomFact().then(setFact)
   }, [])
 
   useEffect(() => {
@@ -35,9 +29,20 @@ export function App () {
   }
   , [fact])
 
+  const handleClick = async () => {
+    const newFact = await getRamdomFact()
+    setFact(newFact)
+  }
   return (
     <>
-      <h1>data fetching</h1>
+      <section className='section-title'>
+        <h1>data fetching</h1>
+        <button onClick={handleClick}>
+          <strong>
+            Get new fact
+          </strong>
+        </button>
+      </section>
       <section>
         {fact && <p>{fact}</p>}
         {imageUrl &&
