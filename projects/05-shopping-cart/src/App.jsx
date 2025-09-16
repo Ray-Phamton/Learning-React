@@ -4,8 +4,8 @@ import { Products } from './components/Products'
 import './App.css'
 export function App () {
   return (
-    <div className='page'>
+    <>
       <Products products={products} />
-    </div>
+    </>
   )
 }
