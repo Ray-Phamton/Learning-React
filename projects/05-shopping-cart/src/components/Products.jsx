@@ -15,6 +15,9 @@ export function Products ({ products }) {
               <strong>{product.title}</strong>
             </div>
             <div>
+              <h3>${product.price}</h3>
+            </div>
+            <div>
               <button>
                 <AddToCartIcon />
               </button>
