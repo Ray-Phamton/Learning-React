@@ -6,7 +6,7 @@ export default function AboutPage () {
       <h1>About</h1>
       <div>
         <img src='https://avatars.githubusercontent.com/u/202880721?v=4' alt='Photo of Ray-Phamton' />
-        <p>hello!, i am Raymon Reyes and i am create a clone of React Router </p>
+        <p>hi!, My name is Raymon Reyes and i am creating a clone of React Router </p>
       </div>
       <Link to='/'>Go to Home</Link>
     </>
