@@ -10,10 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "path-to-regexp": "8.3.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
-"devDependencies": {
+  "devDependencies": {
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react-swc": "^4.0.0",
